@@ -78,6 +78,7 @@ intents.matches(/^meteo/i, [
             retTemp = temperature;
             session.send('La temperature est de %s', retTemp);
             session.send('http://openweathermap.org/img/w/10d.png');
+            builder.create(session,'http://openweathermap.org/img/w/10d.png')
         });
     }
 ]);
