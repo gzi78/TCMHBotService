@@ -77,7 +77,7 @@ intents.matches(/^meteo/i, [
         GetMeteoData(null, session.userData.city, session.userData.country , function(err, temperature){
             retTemp = temperature;
             session.send('La temperature est de %s', retTemp);
-            //session.send('http://openweathermap.org/img/w/10d.png');
+            session.send('http://openweathermap.org/img/w/10d.png');
         });
     }
 ]);
