@@ -49,8 +49,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 //    <add key="MicrosoftAppId" value="904d56e0-9ba0-4474-9cea-df2f6fe90572" />
 //    <add key="MicrosoftAppPassword" value="NiubOFNVodc5V1ObiJqYWWL" />
 var connector = new builder.ChatConnector({
-    appId: process.env.BOT_APP_ID, //  "904d56e0-9ba0-4474-9cea-df2f6fe90572",
-    appPassword: process.env.BOT_APP_PWD //"NiubOFNVodc5V1ObiJqYWWL"
+    appId: "6c34581c-87b1-4fca-b6fa-0556ae678fce", //process.env.BOT_APP_ID, //  "6c34581c-87b1-4fca-b6fa-0556ae678fce",
+    appPassword: "1E0PVYEABGmmgdrGqwo7afW"//process.env.BOT_APP_PWD //"1E0PVYEABGmmgdrGqwo7afW"
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
@@ -101,7 +101,7 @@ intents.matches(/^change name/i, [
 
 intents.onDefault([
     function (session, args, next) {
-        if (!session.userData.name) {
+        if (!session.userData.nom) {
             session.beginDialog('/profile');
         } else {
             next();
