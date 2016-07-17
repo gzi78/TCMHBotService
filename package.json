@@ -1,0 +1,23 @@
+{
+  "name": "tcmhbotservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzi78/TCMHBotService.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gzi78/TCMHBotService/issues"
+  },
+  "homepage": "https://github.com/gzi78/TCMHBotService#readme",
+  "dependencies": {
+    "botbuilder": "^3.0.1",
+    "restify": "^4.1.1"
+  }
+}
