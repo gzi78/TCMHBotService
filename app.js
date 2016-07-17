@@ -80,6 +80,14 @@ intents.matches(/^meteo/i, [
             session.send('http://openweathermap.org/img/w/10d.png');
             builder.create(session,'http://openweathermap.org/img/w/10d.png');
             builder.CardAction.showimage(session,'http://openweathermap.org/img/w/10d.png');
+            
+            session.send("Here's how to send a picture message...");
+        var msg = new builder.Message()
+            .addAttachment({
+                contentUrl: "'http://openweathermap.org/img/w/10d.png'",
+                contentType: "image/png"
+            });
+        session.endDialog(msg);
         });
     }
 ]);
