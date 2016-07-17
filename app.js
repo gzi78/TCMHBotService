@@ -31,6 +31,7 @@ function GetMeteoData(err, city, country, temperature) {
     }).end();    
 };
 
+//http://openweathermap.org/img/w/10d.png
 
 var botMode = 'Chat'
 
@@ -75,7 +76,8 @@ intents.matches(/^meteo/i, [
         session.send(util.format('Je consulte immédiatement la météo de %s, %s', session.userData.city, session.userData.country ));
         GetMeteoData(null, session.userData.city, session.userData.country , function(err, temperature){
             retTemp = temperature;
-            session.send('La temperature a est de %s', retTemp);
+            session.send('La temperature est de %s', retTemp);
+            session.send('http://openweathermap.org/img/w/10d.png');
         });
     }
 ]);
