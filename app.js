@@ -78,11 +78,11 @@ intents.matches(/^meteo/i, [
             retTemp = temperature;
             session.send('La temperature est de %s', retTemp);
             session.send('http://openweathermap.org/img/w/10d.png');
-            builder.create(session,'http://openweathermap.org/img/w/10d.png');
-            builder.CardAction.showimage(session,'http://openweathermap.org/img/w/10d.png');
+            //builder.create(session,'http://openweathermap.org/img/w/10d.png');
+            //builder.CardAction.showimage(session,'http://openweathermap.org/img/w/10d.png');
             
             session.send("Here's how to send a picture message...");
-        var msg = new builder.Message()
+            var msg = new builder.Message()
             .addAttachment({
                 contentUrl: "'http://openweathermap.org/img/w/10d.png'",
                 contentType: "image/png"
